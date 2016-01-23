@@ -78,10 +78,8 @@ describe("paths",function(){
 		g.addEdge('A','B');
 		g.addEdge('B','C');
 		var path=g.pathBetween('A','C')
-
 		assert.deepEqual(['A','B','C'],path);
 	});
-
 
 	it("should determine a path between vertices when there is only a single path",function(){
 		g.addEdge('A','B');
@@ -89,7 +87,7 @@ describe("paths",function(){
 		g.addEdge('B','D');
 		g.addEdge('D','E');
 
-		var path=g.pathBetween('A','E')
+		var path=g.pathBetween('A','E');
 
 		assert.equal(4,path.length);
 		assert.deepEqual(['A','B','D','E'],path);
